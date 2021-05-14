@@ -1,15 +1,12 @@
 
 import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.io.StringReader;
 import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Iterator;
 import java.util.List;
 
-import javax.print.PrintException;
 import javax.xml.XMLConstants;
 import javax.xml.transform.stream.StreamSource;
 import javax.xml.validation.Schema;
@@ -18,11 +15,10 @@ import javax.xml.validation.Validator;
 
 import com.thaiopensource.xml.sax.ErrorHandlerImpl;
 
-
 import org.xml.sax.SAXException;
 
 
-class RelaxNGCompactSchemaValidator { //JingTask.Java
+class RelaxNGCompactSchemaValidator { 
     private static List<List<String>> allError = new ArrayList<List<String>>(); 
     
     public static class ceh extends ErrorHandlerImpl {
@@ -38,18 +34,14 @@ class RelaxNGCompactSchemaValidator { //JingTask.Java
         validateRnc();
     }
 
-    public static void validateRnc() throws IOException
-    {
-          // https://stackoverflow.com/questions/4983057/using-jing-with-google-app-engine-cant-load-schemafactory-given-relax-ng-schem
+    public static void validateRnc() throws IOException {
+        File schemaLocation = new File("/Users/debaditya.mohankudo/Documents/SPIKE-validate-BIMI-LOGO/relaxng/relaxng/svg_1-2_ps.rnc");
+        File svgLocation = new File("/Users/debaditya.mohankudo/Documents/SPIKE-validate-BIMI-LOGO/relaxng/relaxng/xss-mouseover.svg");
+        System.setProperty(SchemaFactory.class.getName() + ":" + XMLConstants.RELAXNG_NS_URI, "com.thaiopensource.relaxng.jaxp.CompactSyntaxSchemaFactory");
+        SchemaFactory factory = SchemaFactory.newInstance(XMLConstants.RELAXNG_NS_URI);
+        ceh eh = new ceh();
           
-          File schemaLocation = new File("/Users/debaditya.mohankudo/Documents/SPIKE-validate-BIMI-LOGO/relaxng/relaxng/svg_1-2_ps.rnc");
-          File svgLocation = new File("/Users/debaditya.mohankudo/Documents/SPIKE-validate-BIMI-LOGO/relaxng/relaxng/xss-mouseover.svg");
-          System.setProperty(SchemaFactory.class.getName() + ":" + XMLConstants.RELAXNG_NS_URI, "com.thaiopensource.relaxng.jaxp.CompactSyntaxSchemaFactory");
-          SchemaFactory factory = SchemaFactory.newInstance(XMLConstants.RELAXNG_NS_URI);
-          ceh eh = new ceh();
-          
-        try 
-        {
+        try {
             Schema schema = factory.newSchema(schemaLocation);
             Validator validator = schema.newValidator();
             validator.setErrorHandler(eh);
@@ -57,13 +49,11 @@ class RelaxNGCompactSchemaValidator { //JingTask.Java
             validator.validate(xmls);
         }
           
-          catch (SAXException | IOException  e) 
-        {
-            // TODO Auto-generated catch block
+        catch (SAXException | IOException  e) {
             eh.printException(e);
         }
+
         System.out.println(allError);
     }
-
 
 }
