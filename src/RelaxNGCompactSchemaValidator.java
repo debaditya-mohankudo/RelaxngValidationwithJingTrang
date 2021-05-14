@@ -19,13 +19,14 @@ import org.xml.sax.SAXException;
 
 
 class RelaxNGCompactSchemaValidator { 
-    private static List<List<String>> allError = new ArrayList<List<String>>(); 
     
     public static class ceh extends ErrorHandlerImpl {
+
+        public static final List<List<String>> allErrors = new ArrayList<List<String>>();
         public void print(String message) {
             if (message.length() != 0) {
                 List<String> error = Arrays.asList(message.split(";"));
-                allError.add(error);
+                allErrors.add(error);
             }
         }
     }
@@ -53,7 +54,7 @@ class RelaxNGCompactSchemaValidator {
             eh.printException(e);
         }
 
-        System.out.println(allError);
+        System.out.println(ceh.allErrors);
     }
 
 }
