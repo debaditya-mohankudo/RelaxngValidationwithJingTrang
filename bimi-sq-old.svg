@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="3in" height="3in" data-name="Layer 1" version="1.1" viewBox="0 0 216.03749 216.36249" id="svg22" sodipodi:docname="bimi_square.svg" inkscape:version="0.92.4 (5da689c313, 2019-01-14)">
+  <metadata id="metadata26">
+    <rdf:RDF>
+      <cc:Work rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+        <dc:title>bimi</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview pagecolor="#ffffff" bordercolor="#666666" borderopacity="1" objecttolerance="10" gridtolerance="10" guidetolerance="10" inkscape:pageopacity="0" inkscape:pageshadow="2" inkscape:window-width="3200" inkscape:window-height="1668" id="namedview24" showgrid="false" inkscape:zoom="1.0243055" inkscape:cx="115.2" inkscape:cy="115.2" inkscape:window-x="-16" inkscape:window-y="-16" inkscape:window-maximized="1" inkscape:current-layer="svg22"/>
+  <defs id="defs4">
+    <style id="style2">.cls-1{fill:#231f20;}.cls-2{fill:#00b3e6;}</style>
+  </defs>
+  <title id="title6">bimi</title>
+  <g id="g16" style="fill:#231f20" transform="translate(22.002966,12.468339)">
+    <path class="cls-1" d="m 44.557,121.35 a 20.24,20.24 0 0 1 -0.6142,4.919 13.517,13.517 0 0 1 -2.0342,4.4936 14.313,14.313 0 0 1 -3.69,3.5947 16.1,16.1 0 0 1 -5.4863,2.3179 v 0.5674 a 22.243,22.243 0 0 1 5.3916,1.6084 13.834,13.834 0 0 1 4.4463,3.1216 14.376,14.376 0 0 1 2.9805,4.8247 18.786,18.786 0 0 1 1.0879,6.7168 17.283,17.283 0 0 1 -2.1758,8.8452 17.961,17.961 0 0 1 -5.8184,6.1015 26.759,26.759 0 0 1 -8.2773,3.5 40.053,40.053 0 0 1 -9.5547,1.1348 h -4.1152 q -2.5078,0 -5.3921,-0.1416 -2.8872,-0.142 -5.8653,-0.4258 A 41.981,41.981 0 0 1 4e-4,171.6767 v -65.274 q 1.7958,-0.2834 4.1147,-0.5673 2.3174,-0.2835 4.9668,-0.4732 2.6471,-0.1883 5.4395,-0.2837 2.7891,-0.093 5.5342,-0.0947 a 56.697,56.697 0 0 1 9.0341,0.71 25.809,25.809 0 0 1 7.8516,2.5073 14.392,14.392 0 0 1 5.5342,5.0137 14.711,14.711 0 0 1 2.0815,8.135 z M 16.65,133.743 q 1.3234,0 3.0747,-0.0933 a 27.369,27.369 0 0 0 2.8853,-0.2807 17.182,17.182 0 0 0 6.1958,-3.37 7.4152,7.4152 0 0 0 2.6015,-5.8979 7.7923,7.7923 0 0 0 -0.9453,-4.0249 7.1773,7.1773 0 0 0 -2.5068,-2.5274 10.685,10.685 0 0 0 -3.5479,-1.3095 22.41,22.41 0 0 0 -4.1626,-0.3755 q -2.4609,0 -4.5405,0.0942 a 29.233,29.233 0 0 0 -3.2168,0.28 v 17.505 z m 4.2568,28.475 a 18.618,18.618 0 0 0 4.5884,-0.5615 12.085,12.085 0 0 0 3.9258,-1.7325 9.13,9.13 0 0 0 2.7432,-2.95 8.2048,8.2048 0 0 0 1.041,-4.2144 8.4573,8.4573 0 0 0 -1.23,-4.8691 8.3518,8.3518 0 0 0 -3.2168,-2.7627 13.362,13.362 0 0 0 -4.4463,-1.2652 43.628,43.628 0 0 0 -4.919,-0.2807 h -6.9062 v 18.075 a 5.8419,5.8419 0 0 0 1.5137,0.2807 q 1.04,0.093 2.2231,0.1407 1.1831,0.0477 2.46,0.0942 1.277,0.0468 2.2231,0.0459 z" id="path8" inkscape:connector-curvature="0" style="fill:#231f20"/>
+    <path class="cls-1" d="m 57.232,105.93 h 12.961 v 66.22 H 57.232 Z" id="path10" inkscape:connector-curvature="0" style="fill:#231f20"/>
+    <path class="cls-1" d="m 134.24,137.81 0.0274,-9.138 -17.339,31.274 h -4.1633 l -17.47,-31.392 -0.125,9.16 v 34.435 h -12.298 v -66.22 h 11.825 l 20.898,37.994 19.875,-37.994 h 11.73 v 66.22 h -12.96 z" id="path12" inkscape:connector-curvature="0" style="fill:#231f20"/>
+    <path class="cls-1" d="m 159.87,105.93 h 12.961 v 66.22 H 159.87 Z" id="path14" inkscape:connector-curvature="0" style="fill:#231f20"/>
+  </g>
+  <polygon class="cls-2" transform="translate(46.211966,20.994339)" points="62.792,71.075 34.845,43.469 6.898,15.864 6.898,77.831 118.69,77.831 118.69,15.864 90.739,43.469 " id="polygon18" style="fill:#00b3e6"/>
+  <polygon class="cls-2" transform="translate(46.211966,20.994339)" points="35.745,36.19 62.792,62.907 89.839,36.19 116.89,9.474 62.792,9.474 8.698,9.474 " id="polygon20" style="fill:#00b3e6"/>
+</svg>
