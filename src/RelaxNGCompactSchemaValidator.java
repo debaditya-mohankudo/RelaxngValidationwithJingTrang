@@ -9,7 +9,7 @@ import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 
-
+import javax.print.PrintException;
 import javax.xml.XMLConstants;
 import javax.xml.transform.stream.StreamSource;
 import javax.xml.validation.Schema;
@@ -23,40 +23,19 @@ import org.xml.sax.SAXException;
 
 
 class RelaxNGCompactSchemaValidator { //JingTask.Java
-    private static File logFile = new File("/tmp/log.txt");
-   
-
+    private static List<List<String>> allError = new ArrayList<List<String>>(); 
+    
+    public static class ceh extends ErrorHandlerImpl {
+        public void print(String message) {
+            if (message.length() != 0) {
+                List<String> error = Arrays.asList(message.split(";"));
+                allError.add(error);
+            }
+        }
+    }
 
     public static void main(String[] args) throws IOException {
-        cleanupLogFile();
         validateRnc();
-        formatAllExceptions().forEach(System.out::println);
-    }
-
-    private static void cleanupLogFile() throws IOException {
-        if (Files.exists(logFile.toPath())) {
-            Files.delete(logFile.toPath());
-        }
-    }
-
-    private static List<List<String>> formatAllExceptions() throws IOException {
-        List<List<String>> allError = new ArrayList<List<String>>(); 
-        
-        List<String> result = Files.readAllLines(logFile.toPath());
-        
-
-        System.out.println("No of errors: " + result.size());
-
-        Iterator<String> errorIterator = result.iterator();
-
-        while (errorIterator.hasNext()) {
-            String errorText = errorIterator.next();
-            List<String> error = Arrays.asList(errorText.split(";"));
-
-            allError.add(error);
-        }
-
-        return allError;
     }
 
     public static void validateRnc() throws IOException
@@ -67,7 +46,7 @@ class RelaxNGCompactSchemaValidator { //JingTask.Java
           File svgLocation = new File("/Users/debaditya.mohankudo/Documents/SPIKE-validate-BIMI-LOGO/relaxng/relaxng/xss-mouseover.svg");
           System.setProperty(SchemaFactory.class.getName() + ":" + XMLConstants.RELAXNG_NS_URI, "com.thaiopensource.relaxng.jaxp.CompactSyntaxSchemaFactory");
           SchemaFactory factory = SchemaFactory.newInstance(XMLConstants.RELAXNG_NS_URI);
-          ErrorHandlerImpl eh = new ErrorHandlerImpl(new FileWriter(logFile));
+          ceh eh = new ceh();
           
         try 
         {
@@ -83,6 +62,7 @@ class RelaxNGCompactSchemaValidator { //JingTask.Java
             // TODO Auto-generated catch block
             eh.printException(e);
         }
+        System.out.println(allError);
     }
 
 
