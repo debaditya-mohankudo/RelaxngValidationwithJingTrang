@@ -45,8 +45,8 @@ class RelaxNGCompactSchemaValidator {
     }
 
     public List<List<String>> validateRnc() throws IOException, SAXNotRecognizedException, SAXNotSupportedException {
-        File schemaLocation = new File("/xyz/svg_1-2_ps.rnc");
-        File svgLocation = new File("/xyz/xss-mouseover.svg");
+        File schemaLocation = new File("./svg_1-2_ps.rnc");
+        File svgLocation = new File("./bimi-sq-old.svg");
         System.setProperty(SchemaFactory.class.getName() + ":" + XMLConstants.RELAXNG_NS_URI, "com.thaiopensource.relaxng.jaxp.CompactSyntaxSchemaFactory");
         SchemaFactory factory = SchemaFactory.newInstance(XMLConstants.RELAXNG_NS_URI);
         factory.setFeature(XMLConstants.FEATURE_SECURE_PROCESSING, true);
