@@ -20,7 +20,7 @@ import org.xml.sax.SAXException;
 
 class RelaxNGCompactSchemaValidator { 
     
-    private  class ceh extends ErrorHandlerImpl {
+    private  class CustomErrorHandler extends ErrorHandlerImpl {
 
         private List<List<String>> allErrors = new ArrayList<List<String>>();
         public void print(String message) {
@@ -47,7 +47,7 @@ class RelaxNGCompactSchemaValidator {
         File svgLocation = new File("/Users/debaditya.mohankudo/Documents/SPIKE-validate-BIMI-LOGO/relaxng/relaxng/xss-mouseover.svg");
         System.setProperty(SchemaFactory.class.getName() + ":" + XMLConstants.RELAXNG_NS_URI, "com.thaiopensource.relaxng.jaxp.CompactSyntaxSchemaFactory");
         SchemaFactory factory = SchemaFactory.newInstance(XMLConstants.RELAXNG_NS_URI);
-        ceh eh = new ceh();
+        CustomErrorHandler eh = new CustomErrorHandler();
           
         try {
             Schema schema = factory.newSchema(schemaLocation);
