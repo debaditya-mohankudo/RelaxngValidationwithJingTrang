@@ -16,6 +16,8 @@ import javax.xml.validation.Validator;
 import com.thaiopensource.xml.sax.ErrorHandlerImpl;
 
 import org.xml.sax.SAXException;
+import org.xml.sax.SAXNotRecognizedException;
+import org.xml.sax.SAXNotSupportedException;
 
 
 class RelaxNGCompactSchemaValidator { 
@@ -35,18 +37,19 @@ class RelaxNGCompactSchemaValidator {
         }
     }
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, SAXNotRecognizedException, SAXNotSupportedException {
         RelaxNGCompactSchemaValidator obj = new RelaxNGCompactSchemaValidator();
         List<List<String>> allErros = obj.validateRnc();
         System.out.println(allErros);
         
     }
 
-    public List<List<String>> validateRnc() throws IOException {
-        File schemaLocation = new File("/Users/debaditya.mohankudo/Documents/SPIKE-validate-BIMI-LOGO/relaxng/relaxng/svg_1-2_ps.rnc");
-        File svgLocation = new File("/Users/debaditya.mohankudo/Documents/SPIKE-validate-BIMI-LOGO/relaxng/relaxng/xss-mouseover.svg");
+    public List<List<String>> validateRnc() throws IOException, SAXNotRecognizedException, SAXNotSupportedException {
+        File schemaLocation = new File("/xyz/svg_1-2_ps.rnc");
+        File svgLocation = new File("/xyz/xss-mouseover.svg");
         System.setProperty(SchemaFactory.class.getName() + ":" + XMLConstants.RELAXNG_NS_URI, "com.thaiopensource.relaxng.jaxp.CompactSyntaxSchemaFactory");
         SchemaFactory factory = SchemaFactory.newInstance(XMLConstants.RELAXNG_NS_URI);
+        factory.setFeature(XMLConstants.FEATURE_SECURE_PROCESSING, true);
         CustomErrorHandler eh = new CustomErrorHandler();
           
         try {
