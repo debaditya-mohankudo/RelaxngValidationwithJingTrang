@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.io.StringReader;
 import java.nio.file.Files;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import javax.xml.XMLConstants;
@@ -24,7 +23,7 @@ import org.xml.sax.SAXParseException;
 
 class RelaxNGCompactSchemaValidator { 
     
-    private class CustomErrorHandler extends ErrorHandlerImpl {
+    private static class CustomErrorHandler extends ErrorHandlerImpl {
 
         private final List<String> errors = new ArrayList<>();
 
